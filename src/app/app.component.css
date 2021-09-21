@@ -1,8 +1,10 @@
 .example-spacer {
     flex: 1 1 auto;
 }
-.example-card {
+#card {
+    margin-top: 20px;
     max-width: 400px;
+    margin: 10px;
 }
 
 .example-header-image {

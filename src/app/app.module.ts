@@ -13,6 +13,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReferenciaFormularioComponent } from './referencia-formulario/referencia-formulario.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, ReferenciaFormularioComponent],
@@ -27,7 +30,10 @@ import { MatInputModule } from '@angular/material/input';
     MatChipsModule,
     FlexLayoutModule,
     MatDividerModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

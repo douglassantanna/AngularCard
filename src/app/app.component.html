@@ -15,13 +15,14 @@
     mat-raised-button
     class="example-icon"
     aria-label="Example icon-button with share icon"
+    (click)="openDialog()"
   >
     Novo
   </button>
 </mat-toolbar>
 
-<div fxLayout="row" fxLayoutAlign="space-around start">
-  <mat-card class="example-card" *ngFor="let referencia of referencias">
+<div fxLayout="row wrap" fxLayoutAlign="start start" style="padding: 10px;">
+  <mat-card id="card" *ngFor="let referencia of referencias" class="mat-elevation-z5">
     <mat-card-header>
       <mat-card-title>{{ referencia.titulo }}</mat-card-title>
     </mat-card-header>
@@ -30,6 +31,7 @@
         width="400px"
         [src]="referencia.preview.image"
         alt="Photo of a Shiba Inu"
+        style="max-height: 300px;"
       />
     </div>
     <mat-card-content>
@@ -40,11 +42,9 @@
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <mat-chip-list aria-label="Fish selection">
-        <mat-chip color="primary" selected>{{ referencia.tag }}</mat-chip>
+      <mat-chip-list>
+        <mat-chip color="primary" selected >{{ referencia.tag }}</mat-chip>
       </mat-chip-list>
     </mat-card-actions>
   </mat-card>
 </div>
-
-<app-referencia-formulario></app-referencia-formulario>

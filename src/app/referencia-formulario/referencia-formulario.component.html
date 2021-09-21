@@ -1,14 +1,21 @@
 <h1>Referencia</h1>
 <mat-divider></mat-divider>
-<form class="example-form" autocomplete="off">
-    <mat-form-field class="example-full-width" appearance="outline">
+<form class="example-form" autocomplete="off" >
+    <mat-form-field class="example-full-width" appearance="outline" form="ngForm" (ngSubmit)="onSubmit()">
       <mat-label>Título</mat-label>
-      <input matInput>
+      <input matInput [(ngModel)]="referencia.titulo" name="titulo"/>
     </mat-form-field>
   
     <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>Link</mat-label>
-        <input matInput>
+        <input matInput [(ngModel)]="referencia.link" name="link"/>
       </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Tag</mat-label>
+        <input matInput [(ngModel)]="referencia.tag" name="tag"/>
+      </mat-form-field>
+
+      <button mat-raised-button [mat-dialog-close]="referencia" color="primary" type="submit" >Salvar</button>
   </form>
   
