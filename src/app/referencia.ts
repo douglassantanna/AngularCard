@@ -1,4 +1,4 @@
-export interface Referencia {
+export interface Referencias {
     titulo: string;
     link: string;
     tag: string;
@@ -6,7 +6,7 @@ export interface Referencia {
 }
 
 export interface Preview {
-    title: string;
+    titulo: string;
     description: string;
     image: string;
     url: string;
