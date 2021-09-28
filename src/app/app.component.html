@@ -15,7 +15,7 @@
     mat-raised-button
     class="example-icon"
     aria-label="Example icon-button with share icon"
-    (click)="openDialog()"
+    (click)="abrirFormParaNovaReferencia()"
   >
     Novo
   </button>
@@ -42,9 +42,13 @@
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <mat-chip-list>
-        <mat-chip color="primary" selected >{{ referencia.tag }}</mat-chip>
-      </mat-chip-list>
+      <div style="display: flex; flex-direction: row;">
+        <mat-chip-list>
+          <mat-chip color="primary" selected>{{ referencia.tag }}</mat-chip>
+        </mat-chip-list>
+        <span style="flex: 1 1 auto;"></span>
+        <button mat-icon-button color="warn" (click)="deletar(referencia.id)"><mat-icon>delete</mat-icon></button>
+      </div>
     </mat-card-actions>
   </mat-card>
 </div>

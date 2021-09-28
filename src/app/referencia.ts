@@ -1,4 +1,5 @@
 export interface Referencias {
+    id: string;
     titulo: string;
     link: string;
     tag: string;
@@ -10,4 +11,10 @@ export interface Preview {
     description: string;
     image: string;
     url: string;
+}
+
+export interface NovaReferencia{
+    titulo: string;
+    link: string;
+    tag: string;
 }
